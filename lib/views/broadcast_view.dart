@@ -23,7 +23,7 @@ class _BroadcastViewState extends State<BroadcastView> {
 
   // Constants for consistent naming
   static const String _defaultChannelName = "eg-cart";
-  static const String _defaultEventName = "Test message";
+  static const String _defaultEventName = "postion";
 
   @override
   void initState() {
@@ -109,10 +109,7 @@ class _BroadcastViewState extends State<BroadcastView> {
   void _onMessageReceived(Map<String, dynamic> payload) {
     try {
       // Handle the payload structure: { "event": "Test message", "payload": { "message": "Hello World" }, "type": "broadcast" }
-      final message =
-          payload['payload']?['message']?.toString() ??
-          payload['message']?.toString() ??
-          'Unknown message';
+      final message = payload['payload'].toString();
 
       _addLog('📥 Received: $message');
     } catch (e) {

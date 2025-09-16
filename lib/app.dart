@@ -31,7 +31,7 @@ class Home extends StatelessWidget {
 
                 ElevatedButton(
                   onPressed: () {
-                    Get.to(UWBPositionApp());
+                    Get.to(MapView());
                   },
                   child: Text("View Map"),
                 ),
